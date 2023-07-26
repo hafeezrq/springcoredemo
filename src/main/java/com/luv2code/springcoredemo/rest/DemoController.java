@@ -1,6 +1,7 @@
-package com.luv2code.springcoredemo;
+package com.luv2code.springcoredemo.rest;
 
 import org.springframework.web.bind.annotation.RestController;
+import com.luv2code.springcoredemo.common.Coach;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @RestController
