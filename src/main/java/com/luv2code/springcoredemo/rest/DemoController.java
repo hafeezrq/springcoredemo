@@ -1,9 +1,11 @@
 package com.luv2code.springcoredemo.rest;
 
-import org.springframework.web.bind.annotation.RestController;
-import com.luv2code.util.Coach;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.luv2code.util.Coach;
 
 @RestController
 public class DemoController {
@@ -14,13 +16,13 @@ public class DemoController {
    */
 
   @Autowired
-  public void setMyCoach(Coach theCoach) {
-    myCoach = theCoach;
+  public void setMyCoach(@Qualifier("hockeyCoach") Coach theCoach) {
+    this.myCoach = theCoach;
   }
 
   @GetMapping(value = "/dailyworkouts")
   public String getDailyWorkout() {
-    return myCoach.getDailyWorkout();
+    return this.myCoach.getDailyWorkout();
   }
 
 }
