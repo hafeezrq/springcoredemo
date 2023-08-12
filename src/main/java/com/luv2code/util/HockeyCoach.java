@@ -4,6 +4,11 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class HockeyCoach implements Coach {
+	
+	public HockeyCoach() {
+		System.out.println("Hi, I am " + getClass().getSimpleName());
+
+	}
 
 	@Override
 	public String getDailyWorkout() {

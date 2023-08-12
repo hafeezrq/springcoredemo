@@ -14,9 +14,12 @@ public class DemoController {
   /*
    * public DemoController(Coach theCoach) { myCoach = theCoach; }
    */
+  public DemoController() {
+	System.out.println("HI, Iam the controller!");
+}
 
   @Autowired
-  public void setMyCoach(@Qualifier("hockeyCoach") Coach theCoach) {
+  public void setMyCoach(@Qualifier("cricketCoach") Coach theCoach) {
     this.myCoach = theCoach;
   }
 
