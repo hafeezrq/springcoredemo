@@ -15,7 +15,6 @@ public class DemoController {
    * public DemoController(Coach theCoach) { myCoach = theCoach; }
    */
   public DemoController() {
-	System.out.println("HI, Iam the controller!");
 }
 
   @Autowired
